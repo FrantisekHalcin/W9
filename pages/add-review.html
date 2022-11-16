@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pridaj recenziu</title>
+    <style>
+        .top:visited,
+        link {
+            color: black
+        }
+
+        .top:hover {
+            color: black;
+            background-color: rgb(205, 221, 255);
+        }
+
+        .top {
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            border: solid black 1px;
+            padding: 5px;
+            background-color: rgb(189, 185, 255);
+            display: inline;
+            text-align: right;
+        }
+
+        .flexbox {            
+            padding: 0px;
+            margin: auto;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            width: 810px;
+        }
+
+        li {
+            margin-left: 5px;
+        }
+
+        form {
+            margin: auto;
+            background-color: rgb(254, 219, 149);
+            border: solid black 1px;
+            border-radius: 10px;
+            width: 50%;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        input,
+        textarea,
+        select {
+            color: black;
+            display: block;
+            margin: auto;
+            margin-bottom: 10px;
+            width: 80%;
+        }
+
+        .button {
+            width: 30%;
+        }
+
+        label {
+            color: rgb(32, 31, 31);
+            font-family: Verdana;
+            display: block;
+            margin: auto;
+            width: 80%;
+
+        }
+
+        h1 {
+            font-family: Verdana;
+            text-align: center;
+            color: antiquewhite;
+            padding: 5px;
+            margin: auto;
+            border: solid rgb(0, 0, 0) 2px;
+            border-radius: 10px;
+            background-color: rgb(79, 3, 3);
+            width: 50%;
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+
+        #result {
+            background-color: aqua;
+            display: inline;
+            margin: auto;
+            padding: 0px;
+            position: relative;
+            left: 10px;
+            border: solid black 1px;
+        }
+
+        div {
+            margin: auto;
+            width: 150px;
+            height: 150px;
+            box-sizing: border-box;
+
+        }
+
+        #blue {
+            border: solid blue 15px;
+            margin-top: 50px;
+            position: relative;
+            left: 20px;
+            z-index: 20;
+
+        }
+
+        #orange {
+            border: solid orange 15px;
+            position: relative;
+            bottom: 450px;
+            right: 20px;
+        }
+
+        #green {
+            border: solid green 15px;
+            position: relative;
+            bottom: 340px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        #red {
+            border: solid red 15px;
+            position: relative;
+            bottom: 190px;
+            right: 20px;
+            z-index: 30;
+        }
+
+        #logo {
+            margin: auto;
+            width: 190px;
+            height: 190px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="flexbox">
+            <li class="nav"><a class="top" href="../index.html">Domov</a></li>
+            <li class="nav"><a class="top" href="moviechart.html">TOP Filmy</a></li>
+            <li class="nav"><a class="top" href="add-review.html">Pridať recenziu</a></li>
+        </ul>
+    </nav>
+    <h1>Pridaj recenziu</h1>
+    <form autocomplete="on">
+        <input type="text" placeholder="názov filmu" required>
+        <input type="text" id="nick" placeholder="meno/nick">
+        <input type="email" id="email" placeholder="email">
+        <textarea name="ofilme" cols="30" rows="10" placeholder="Čo sa vám na filme páčilo najviac?"></textarea>
+        <label for="date">Kedy ste videli tento film naposledy?</label>
+        <input type="date" name="date" id="date">
+        <label for="score">Aké hodnotenie by ste dali uvedenému filmu na stupnici od 0 do 100?<span
+                id="result"></span></label>
+        <input id="score" name="score" type="range" min="0" max="100" step="10" value="50" onChange="change();">
+        <label for="zaner">Do ktorého žánru by ste zaradili tento film?</label>
+        <select name="zaner" id="zaner">
+            <option value="blind">...</option>
+            <option value="romantic">romantický</option>
+            <option value="comedy">komédia</option>
+            <option value="action">akčný</option>
+            <option value="thriller">triler</option>
+            <option value="drama">dráma</option>
+            <option value="horror">horor</option>
+            <option value="sci-fi">sci-fi</option>
+        </select>
+        <input class="button" type="submit" value="odoslať informácie">
+    </form>
+
+    <script>
+        var result = document.getElementById("result");
+        var mine = document.getElementById("score");
+        function change() {
+            result.innerText = mine.value;
+        }
+    </script>
+    <div id="logo">
+        <div id="blue"></div>
+        <div id="red"></div>
+        <div id="green"></div>
+        <div id="orange"></div>
+    </div>
+</body>
+
+
+
+</html>

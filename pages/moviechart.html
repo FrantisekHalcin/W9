@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <style>
+        .top:visited,
+        link {
+            color: black
+        }
+
+        .top:hover {
+            color: black;
+            background-color: rgb(205, 221, 255);
+        }
+
+        .top {
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            border: solid black 1px;
+            padding: 5px;
+            background-color: rgb(189, 185, 255);
+            display: inline;
+            text-align: right;
+        }
+
+        .flexbox {
+            padding: 0px;
+            margin: auto;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            width: 810px;
+        }
+
+        li {
+            margin-left: 5px;
+        }
+
+        h1 {
+            font-family: Verdana;
+            text-align: center;
+            color: antiquewhite;
+            padding: 5px;
+            display: block;
+            border: solid rgb(0, 0, 0) 2px;
+            border-radius: 10px;
+            background-color: rgb(79, 3, 3);
+            margin-top: 0px;
+            margin-bottom: 10px;
+
+        }
+
+        section {
+            margin: auto;
+            width: 810px;
+            text-align: justify;
+            border: solid black 2px;
+            border-radius: 10px;
+            background-color: rgb(255, 237, 221);
+            padding: 15px;
+            padding-top: 5px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, Helvetica, sans-serif;
+        }
+
+        #shawshank {
+            border: solid black 1px;
+            border-radius: 5px;
+            margin: 5px;
+            margin-left: 0px;
+            width: 220px;
+        }
+
+        article {
+            text-align: right;
+            display: inline;
+            font-size: large;
+
+        }
+
+        tr:nth-child(even) {
+            background-color: #e9bd84;
+        }
+
+        th {
+            margin: 2px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(61, 47, 38);
+        }
+
+        table {
+            margin: auto;
+            margin-top: 20px;
+            border-collapse: collapse;
+            border: solid black 1px;
+
+
+        }
+
+        td {
+            padding: 1px 5px;
+        }
+
+        .topka {
+            text-align: center;
+            color: rgb(1, 101, 1)
+        }
+
+        .poradie {
+            text-align: right;
+            color: rgb(255, 255, 255);
+            background-color: rgb(61, 47, 38);
+        }
+
+        .hodnotenie {
+            text-align: center;
+            color: rgb(70, 26, 0)
+        }
+
+        figcaption {
+            display: block;
+            clear: left;
+            text-align: center;
+            margin-bottom: 2px;
+        }
+
+        figure {
+            float: left;
+            margin: 5px;
+            margin-top: 0px;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltipText {
+            visibility: hidden;
+            color: antiquewhite;
+            background-color: black;
+            position: absolute;
+            width: 120px;
+            text-align: center;
+            left: -152px;
+            border: solid black 1px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .tooltip:hover .tooltipText {
+            visibility: visible;
+        }
+
+        .imgtooltip {
+            width: inherit;
+        }
+    </style>
+    <title>Rebríček filmov</title>
+</head>
+
+<body>
+
+    <nav>
+        <ul class="flexbox">
+            <li class="nav"><a class="top" href="../index.html">Domov</a></li>
+            <li class="nav"><a class="top" href="moviechart.html">TOP Filmy</a></li>
+            <li class="nav"><a class="top" href="add-review.html">Pridať recenziu</a></li>
+        </ul>
+    </nav>
+    <table>
+        <tr>
+            <th>Poradie</th>
+            <th>Film</th>
+            <th>Rok</th>
+            <th>Hodnotenie</th>
+        </tr>
+        <tr>
+            <td class="poradie">1.</td>
+            <td>
+                <div class="tooltip">The Shawshank Redemption<span class="tooltipText"><img src="../images/andy.jpg"
+                            alt="hlavná postava filmu" class="imgtooltip">Andy Dufresne</span></div>
+            </td>
+            <td>1994</td>
+            <td class="topka">95 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">2.</td>
+            <td>
+                <div class="tooltip">Forrest Gump<span class="tooltipText"><img src="../images/gump.jpg"
+                            alt="hlavná postava filmu" class="imgtooltip">Forrest Gump</span></div>
+            </td>
+            <td>1994</td>
+            <td class="topka">94.5 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">3.</td>
+            <td>
+                <div class="tooltip">Green Mile<span class="tooltipText"><img src="../images/john.jpg"
+                            alt="hlavná postava filmu" class="imgtooltip">John Coffey</span></div>
+            </td>
+            <td>1999</td>
+            <td class="topka">92.9 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">4.</td>
+            <td>
+                <div class="tooltip">Seven<span class="tooltipText"><img src="../images/david.jpg"
+                            alt="hlavná postava filmu" class="imgtooltip">David Mills</span></div>
+            </td>
+            <td>1995</td>
+            <td class="topka">92.5 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">5.</td>
+            <td>
+                <div class="tooltip">One Flew over the Cuckoo's Nest<span class="tooltipText"><img
+                            src="../images/randle.jpg" alt="hlavná postava filmu" class="imgtooltip">Randle P.
+                        McMurphy</span></div>
+            </td>
+            <td>1975</td>
+            <td class="topka">92.4 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">6.</td>
+            <td>Schindler's List</td>
+            <td>1993</td>
+            <td class="topka">92.3 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">7.</td>
+            <td>The Godfather</td>
+            <td>1972</td>
+            <td class="hodnotenie">91.8 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">8.</td>
+            <td>12 Angry Men</td>
+            <td>1957</td>
+            <td class="hodnotenie">91.4 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">9.</td>
+            <td>Intouchables</td>
+            <td>2011</td>
+            <td class="hodnotenie">91.3 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">10.</td>
+            <td>Pelíšky</td>
+            <td>1999</td>
+            <td class="hodnotenie">91.2 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">11.</td>
+            <td>Terminator 2: Judgment Day</td>
+            <td>1991</td>
+            <td class="hodnotenie">90.9 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">12.</td>
+            <td>Pulp Fiction</td>
+            <td>1994</td>
+            <td class="hodnotenie">90.7 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">13.</td>
+            <td>The Godfather: Part II</td>
+            <td>1974</td>
+            <td class="hodnotenie">90.8 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">14.</td>
+            <td> The Lord of the Rings: The Fellowship of the Ring</td>
+            <td>2001</td>
+            <td class="hodnotenie">90.6 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">15.</td>
+            <td>The Lord of the Rings: The Return of the King</td>
+            <td>2003</td>
+            <td class="hodnotenie">90.5 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">16.</td>
+            <td>The Silence of the Lambs</td>
+            <td>1991</td>
+            <td class="hodnotenie">90.5 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">17.</td>
+            <td>Once Upon a Time in the West</td>
+            <td>1968</td>
+            <td class="hodnotenie">90.5 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">18.</td>
+            <td>The Dark Knight</td>
+            <td>2008</td>
+            <td class="hodnotenie">90.4 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">19.</td>
+            <td>Gran Torino</td>
+            <td>2008</td>
+            <td class="hodnotenie">90.3 &#37;</td>
+        </tr>
+        <tr>
+            <td class="poradie">20.</td>
+            <td>Matrix</td>
+            <td>1999</td>
+            <td class="hodnotenie">90.2 &#37;</td>
+        </tr>
+    </table>
+    <br>
+    <section>
+        <h1>
+            Top film: The Shawshank Redemption
+        </h1>
+
+        <figure>
+            <img src="../images/shawshank.jpg" alt="The Shawshank Redemption" id="shawshank">
+            <figcaption>obrázok 1 - plagát k filmu</figcaption>
+        </figure>
+
+        <article>
+            Zo 7 nominácií na Oscara neobhájil ani jednu. Zo začiatku bol považovaný za absolútny prepadák, dnes ho
+            označujeme za jeden z najúspešnejších filmov.</article><br><br>
+        <article>
+            Mladý a úspešný finančník Andy sa v roku 1947 dostane do väzenia za vraždu manželky a jej milenca, ktorú
+            podľa vlastných slov nespáchal. Po nástupe do väznice Shawshank ho čaká tvrdá práca, šikana a depresie.
+            Vďaka priateľstvu so starým väzňom Redom sú však dni vo väzení znesiteľnejšie.
+            Svojou šikovnosťou si Andy postupne získava nielen priazeň ostatných väzňov, strážcov ale aj samotného
+            riaditeľa. Ten začne využívať Andyho znalosti z oblasti finančníctva vo svoj prospech a v priebehu
+            niekoľkých rokov vďaka podvodom rozprávkovo zbohatne.</article>
+        <article>
+            Keď Andy zistí, že sa našiel vrah jeho manželky a jej milenca, požiada o obnovu súdneho procesu. Narazí však
+            na tvrdý odpor riaditeľa, ktorý nemôže Andyho stratiť. Ak by Andy získal slobodu, riaditeľ by prišiel o
+            všetky kšefty. Navyše dostane strach, že Andy začne rozprávať o jeho finančných podvodoch.
+        </article>
+        <article><br><br>
+            237 ako značka Stephena Kinga
+            Film vznikol ako adaptácia novely Stephena Kinga s názvom Rita Hayworthová a vykúpenie z väznice Shawshank.
+            Spisovateľ dostal od režiséra filmu Franka Darabonta odmenu v hodnote $5.000, šek však zarámoval a poslal
+            Darabontovi späť s odkazom: „Odlož si ich pre prípad, že by si niekedy potreboval zaplatiť kauciu. S láskou,
+            Steve.“
+
+            Verní fanúšikovia Stephena Kinga iste tušia, že číslo 237 nebolo vo filme použité náhodou. Pre Kinga je toto
+            číslo takmer posvätné, a preto ho môžeme vidieť aj v iných filmoch inšpirovaných jeho dielami.
+            <br><br>
+            Hrať mali aj Brad Pitt či Clint Eastwood
+            Postavu Tommyho Williamsa, ktorý vo filme zahynie, mal pôvodne hrať Brad Pitt. V tej dobe neznámy herec ale
+            dostal lepšiu ponuku a Tommyho nakoniec stvárnil Gil Bellows.
+
+            Ani vy si neviete predstaviť tento film bez Morgana Freemana? Potom vás zrejme prekvapí, že pôvodne mal
+            úlohu Reda dostať niekto celkom iný.
+
+            V knižnej predlohe je totiž Red popisovaný ako ryšavý muž írskeho pôvodu. Preto tvorcovia najprv oslovili
+            Clinta Eastwooda, Paula Newmana, Roberta Redforda či Harrisona Forda. Režisér si ale napokon sám vybral
+            Freemana, pretože ho zaujal svojou prirodzenou charizmou.
+
+
+        </article>
+    </section>
+
+    <audio src="../music/forest-lullaby-110624.mp3" autoplay controls style="position: fixed; top: 2px;"></audio>
+</body>
+
+</html>
